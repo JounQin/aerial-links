@@ -1,3 +1,3 @@
-# scaffold-cli
+# aerial-links
 
-Personal scaffold for cli package.
+Get all Aerial video links automatically from its entries.json.
