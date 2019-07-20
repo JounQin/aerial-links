@@ -18,8 +18,8 @@ script:
 before_deploy:
   - set -e
   - git remote set-url origin https://user:$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG.git
+  - git fetch origin master:master
   - git checkout master
-  - git pull origin master
   - yarn run standard-version -a
   - git push --follow-tags origin master
 
