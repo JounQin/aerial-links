@@ -1,12 +1,12 @@
 {
-  "name": "scaffold-cli",
+  "name": "aerial-links",
   "version": "0.1.0",
-  "description": "Personal scaffold for cli package.",
-  "repository": "git@github.com:JounQin/scaffold-cli.git",
+  "description": "Get all Aerial video links automatically from its `entries.json`.",
+  "repository": "git@github.com:JounQin/aerial-links.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
   "bin": {
-    "scaffold-cli": "dist/bin.js"
+    "aerial-links": "dist/bin.js"
   },
   "scripts": {
     "lint": "eslint . --ext .ts --ignore-path .gitignore --max-warnings 10",
@@ -16,6 +16,7 @@
     "dist"
   ],
   "dependencies": {
+    "clipboardy": "^2.1.0",
     "commander": "^2.20.0",
     "signale": "^1.4.0",
     "tslib": "^1.10.0"

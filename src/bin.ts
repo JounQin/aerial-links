@@ -1,20 +1,72 @@
 #! /usr/bin/env node
 
+import fs from 'fs'
+import path from 'path'
+import { promisify } from 'util'
+
+import { write } from 'clipboardy'
 import _program, { CommanderStatic } from 'commander'
 
-import { logger, pkg } from '.'
+import { VALID_TYPES_TIP, ExportType, getAerialLinks, info, logger } from '.'
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { version } = require('../package.json')
 
 export interface Options {
   debug?: boolean
+  exclude?: boolean
+  file?: string
+  json?: boolean
+  noCopy?: boolean
+  type?: ExportType
 }
 
+const writeFile = promisify(fs.writeFile)
+const copy = promisify(write)
 const program: CommanderStatic & Options = _program
 
 program
-  .version(pkg.version)
+  .version(version)
   .option('-d, --debug', 'output debugging logs')
-  .parse(process.argv)
+  .option('-e, --exclude', 'exclude existed files')
+  .option('-t, --type <type>', VALID_TYPES_TIP, 'all')
+  .option('-j, --json', 'output json format')
+  .option('-n, --no-copy', 'do not copy to clipboard')
+  .option(
+    '-f, --file <path>',
+    'filename to export the content, default to print directly',
+  )
+
+program.parse(process.argv)
 
 if (program.debug) {
-  logger.logLevel = 'debug'
+  logger._generalLogLevel = 'debug'
 }
+
+export const newLine = (content: string) => '\n' + content
+
+const { exclude, file, json, noCopy, type } = program
+
+const main = async () => {
+  const links = await getAerialLinks(type, exclude)
+
+  const plainOutput = links.join('\n')
+  const output = json ? JSON.stringify(json) : plainOutput
+
+  logger.debug('links to be exported: %s', newLine(plainOutput))
+
+  if (file) {
+    const outputPath = path.isAbsolute(file) ? file : path.resolve(file)
+    logger.debug('output path: %s', outputPath)
+    await writeFile(outputPath, output)
+  } else {
+    info(newLine(output))
+  }
+
+  if (!noCopy) {
+    copy(output)
+    info('copied to clipboard')
+  }
+}
+
+main()

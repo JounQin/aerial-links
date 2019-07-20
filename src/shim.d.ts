@@ -8,6 +8,6 @@ declare module 'signale' {
   }
 
   interface SignaleBase {
-    logLevel?: LogLevel
+    _generalLogLevel?: LogLevel
   }
 }
