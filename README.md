@@ -1,6 +1,6 @@
 # aerial-links
 
-[![Travis](https://img.shields.io/travis/JounQin/aerial-links.svg)](https://travis-ci.com/JounQin/aerial-links)
+[![Travis](https://img.shields.io/travis/com/JounQin/aerial-links.svg)](https://travis-ci.com/JounQin/aerial-links)
 [![David](https://img.shields.io/david/JounQin/aerial-links.svg)](https://david-dm.org/JounQin/aerial-links)
 [![David Dev](https://img.shields.io/david/dev/JounQin/aerial-links.svg)](https://david-dm.org/JounQin/aerial-links?type=dev)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
