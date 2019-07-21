@@ -45,8 +45,7 @@ program
     '-f, --file <path>',
     'filename to export the content, default to print directly',
   )
-
-program.parse(process.argv)
+  .parse(process.argv)
 
 if (program.debug) {
   _debug.enable(debugNs)
