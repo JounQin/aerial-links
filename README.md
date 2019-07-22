@@ -30,6 +30,7 @@ Options:
   -t, --type <type>  export video type, valid types: all, url-1080-H264, url-1080-HDR, url-1080-SDR, url-4K-HDR, url-4K-SDR (default: "all")
   -j, --json         output json format
   -n, --no-copy      do not copy to clipboard
+  -p, --cache-path   custom aerial cache path to read `entries.json`
   -f, --file <path>  filename to export the content, default to print directly
   -h, --help         output usage information
 ```

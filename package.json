@@ -1,6 +1,6 @@
 {
   "name": "aerial-links",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get all Aerial video links automatically from its `entries.json`.",
   "repository": "git@github.com:JounQin/aerial-links.git",
   "author": "JounQin <admin@1stg.me>",
@@ -26,8 +26,8 @@
     "@types/debug": "^4.1.4",
     "@types/node": "^12.6.8",
     "commitlint": "^8.1.0",
-    "eslint": "^6.0.1",
-    "eslint-config-1stg": "^5.3.0",
+    "eslint": "^6.1.0",
+    "eslint-config-1stg": "^5.3.1",
     "husky": "^3.0.1",
     "lint-staged": "^9.2.0",
     "prettier": "^1.18.2",
