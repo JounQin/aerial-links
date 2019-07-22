@@ -24,14 +24,15 @@ npm i -g aerial-links
 Usage: aerial-links [options]
 
 Options:
-  -V, --version      output the version number
-  -d, --debug        output debugging logs
-  -e, --exclude      exclude existed files
-  -t, --type <type>  export video type, valid types: all, url-1080-H264, url-1080-HDR, url-1080-SDR, url-4K-HDR, url-4K-SDR (default: "all")
-  -j, --json         output json format
-  -n, --no-copy      do not copy to clipboard
-  -f, --file <path>  filename to export the content, default to print directly
-  -h, --help         output usage information
+  -V, --version            output the version number
+  -d, --debug              output debugging logs
+  -e, --exclude            exclude existed files
+  -t, --type <type>        export video type, valid types: all, url-1080-H264, url-1080-HDR, url-1080-SDR, url-4K-HDR, url-4K-SDR (default: "all")
+  -j, --json               output json format
+  -n, --no-copy            do not copy to clipboard
+  -p, --cache-path <path>  custom aerial cache path to read `entries.json`
+  -f, --file <path>        file path to export the content, default to print directly
+  -h, --help               output usage information
 ```
 
 ## JS API

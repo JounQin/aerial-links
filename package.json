@@ -1,6 +1,6 @@
 {
   "name": "aerial-links",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Get all Aerial video links automatically from its `entries.json`.",
   "repository": "git@github.com:JounQin/aerial-links.git",
   "author": "JounQin <admin@1stg.me>",

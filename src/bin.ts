@@ -7,18 +7,16 @@ import { promisify } from 'util'
 import { write } from 'clipboardy'
 import _program, { CommanderStatic } from 'commander'
 
-import { VALID_TYPES_TIP, ExportType, getAerialLinks, info, logger } from '.'
+import { VALID_TYPES_TIP, Options, getAerialLinks, info, logger } from '.'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { version } = require('../package.json')
 
-export interface Options {
+export interface CliOptions extends Options {
   debug?: boolean
-  exclude?: boolean
   file?: string
   json?: boolean
   noCopy?: boolean
-  type?: ExportType
 }
 
 const writeFile = promisify(fs.writeFile)
@@ -33,8 +31,12 @@ program
   .option('-j, --json', 'output json format')
   .option('-n, --no-copy', 'do not copy to clipboard')
   .option(
+    '-p, --cache-path <path>',
+    'custom aerial cache path to read `entries.json`',
+  )
+  .option(
     '-f, --file <path>',
-    'filename to export the content, default to print directly',
+    'file path to export the content, default to print directly',
   )
   .parse(process.argv)
 
@@ -44,10 +46,10 @@ if (program.debug) {
 
 export const newLine = (content: string) => '\n' + content
 
-const { exclude, file, json, noCopy, type } = program
+const { cachePath, exclude, file, json, noCopy, type } = program
 
 const main = async () => {
-  const links = await getAerialLinks(type, exclude)
+  const links = await getAerialLinks({ type, exclude, cachePath })
 
   const plainOutput = links.join('\n')
   const output = json ? JSON.stringify(json) : plainOutput
