@@ -37,11 +37,16 @@ Options:
 
 ## JS API
 
-```js
+```ts
 import { getAerialLinks } from 'aerial-links'
 
-const links = await getAerialLinks(
-  (exportType: ExportType = 'all'),
-  (exclude = false),
-)
+const links = await getAerialLinks({
+  type = 'all',
+  exclude = false,
+  cachePath
+}: {
+  type: ExportType
+  exclude: boolean
+  cachePath?: string
+})
 ```
