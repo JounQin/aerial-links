@@ -1,2 +1,3 @@
-# delete-branch
-Delete a lot of branches at once without tears. :sob:
+# scaffold-cli
+
+Personal scaffold for cli package.

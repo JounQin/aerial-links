@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5"
+  }
+}
