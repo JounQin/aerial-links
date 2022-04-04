@@ -19,7 +19,7 @@
     "clipboardy": "^2.3.0",
     "commander": "^2.20.3",
     "signale": "^1.4.0",
-    "tslib": "^1.10.0"
+    "tslib": "^1.14.1"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.6",
