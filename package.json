@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "clipboardy": "^2.3.0",
-    "commander": "^2.20.3",
+    "commander": "^11.1.0",
     "signale": "^1.4.0",
     "tslib": "^1.14.1"
   },
