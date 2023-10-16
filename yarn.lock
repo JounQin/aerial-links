@@ -239,10 +239,10 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
-"@types/signale@^1.4.4":
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/@types/signale/-/signale-1.4.4.tgz#dbfd32b39f1084551ecda9ba0888e4fef49e9fea"
-  integrity sha512-VYy4VL64gA4uyUIYVj4tiGFF0VpdnRbJeqNENKGX42toNiTvt83rRzxdr0XK4DR3V01zPM0JQNIsL+IwWWfhsQ==
+"@types/signale@^1.4.5":
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/@types/signale/-/signale-1.4.5.tgz#2f90a159fc0657a39df9bc9c93d902cd8aac63c7"
+  integrity sha512-ewkOcex4cJH/4nPw9JIG6vQHDTZ5c0EORm1PZ3FHxHxaASQORYlQiG488LB8Vo/fpdTIfk99cbDYk5VFMXuECg==
   dependencies:
     "@types/node" "*"
 
