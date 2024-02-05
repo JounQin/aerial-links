@@ -24,7 +24,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.6",
     "@types/node": "^12.20.55",
-    "@types/signale": "^1.4.6",
+    "@types/signale": "^1.4.7",
     "commitlint": "^8.3.6",
     "eslint": "^6.8.0",
     "eslint-config-1stg": "^5.3.1",
